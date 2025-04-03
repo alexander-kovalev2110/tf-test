@@ -1,11 +1,8 @@
-import React, { useState, useRef, useEffect } from "react";
-// import { motion, AnimatePresence } from "framer-motion";
+import React, { useState, useRef } from "react";
 
 import Video from "../pages/Video";
 import Introducing from "../pages/Introducing";
 import VirtProd from "../pages/VirtProd";
-// import VirtProdSofa from "../pages/VirtProdSofa";
-// import Sofa1 from "../pages/Sofa1";
 import Sofa2 from "../pages/Sofa2";
 import Sofa3 from "../pages/Sofa3";
 import Sofa4 from "../pages/Sofa4";
@@ -16,10 +13,7 @@ import Armchair from "../pages/Armchair";
 import Instalation from "../pages/Instalation";
 import Dimension from "../pages/Dimension";
 import Lifestyle from "../pages/Lifestyle";
-// import CloseUp1 from "../pages/CloseUp1";
-// import CloseUp2a from "../pages/CloseUp2a";
 import CloseUp2 from "../pages/CloseUp2";
-// import CloseUp3 from "../pages/CloseUp3";
 
 const pages = [
   <Video />,
