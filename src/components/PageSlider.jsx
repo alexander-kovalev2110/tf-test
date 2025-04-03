@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+// import { motion, AnimatePresence } from "framer-motion";
 
 import Video from "../pages/Video";
 import Introducing from "../pages/Introducing";
@@ -25,8 +25,8 @@ const pages = [
   <Video />,
   <Introducing />,
   <VirtProd />,
-  <VirtProdSofa />,
-  <Sofa1 />,
+  // <VirtProdSofa />,
+  // <Sofa1 />,
   <Sofa2 />,
   <Sofa3 />,
   <Sofa4 />,

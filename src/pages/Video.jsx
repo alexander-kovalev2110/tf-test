@@ -2,7 +2,6 @@ import React, { useRef, useEffect } from "react";
 import "../index.css";
 
 const Video = () => {
-// const Video = ({ setHasEnded, hasEnded }) => {
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -14,29 +13,29 @@ const Video = () => {
 
   const handleVideoClick = () => {
     if (videoRef.current) {
-    // if (videoRef.current && !hasEnded) {
       videoRef.current.pause();
-      // setHasEnded(true);
-      console.log("Video clicked");
     }
   };
 
-  const handleVideoEnd = () => {
-    console.log("Video ended");
-    // setHasEnded(true);
-  };
-
   return (
-    <div>
+    <div style={{
+      position: "fixed",
+      top: 0,
+      left: 0,
+      width: "100vw",
+      height: "100vh",
+      overflow: "hidden",
+    }}>
       <video
         ref={videoRef}
         src="video-of-the-sunrise-in-the-dolomites-mount.mp4"
-        autoPlay
         muted
-        playsInline
         onClick={handleVideoClick}
-        onEnded={handleVideoEnd}
-        style={{ width: '100%', height: '100%' }}
+        style={{
+          width: "100vw",
+          height: "100vh",
+          objectFit: "cover",
+        }}
       />
     </div>
   );

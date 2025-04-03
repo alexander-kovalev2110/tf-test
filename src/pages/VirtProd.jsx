@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Typography, Box } from "@mui/material";
 import "../index.css";
 
 const VirtProd = () => {
@@ -13,21 +14,27 @@ const VirtProd = () => {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
+        backgroundColor: "white",
       }}
     >
-      {/* Основное изображение */}
-      <motion.img 
-        src="virtProd.png" 
-        alt="Virtual Product"
-        style={{ width: "100%", display: "block"}}
-      />
+      {/* Main image */}
+      <motion.span
+        style={{ position: "relative", top: "-100px" }} 
+        animate={{ color: ["#4b0082", "#f81c1c", "#4b0082"] }}
+        transition={{ duration: 7, repeat: Infinity, repeatType: "reverse" }}
+      >
+        <Typography variant="h1" fontWeight="bold" component="span">
+          Virtual Product Photography
+        </Typography>
+      </motion.span>
 
-      {/* Анимированное появление yellow-sofa */}
+
+      {/* Animated appearance of yellow-sofa */}
       <motion.img
-        src="yellow-sofa.png"
-        alt="Yellow Sofa"
-        initial={{ y: "100vh", opacity: 1 }} // Начальное положение за экраном
-        animate={{ y: "calc(100vh - 600px)", opacity: 1 }} // Выезд к центру экрана
+        src="virtProdSofa.png"
+        initial={{ y: "100vh", opacity: 1 }}                // Initial position behind the screen
+        animate={{ y: "calc(100vh - 630px)", opacity: 1 }}  // Move to the center of the screen
+        // animate={{ y: "calc(100vh - 600px)", opacity: 1 }}  // Move to the center of the screen
         transition={{ duration: 1.2, delay: 0.8, ease: "linear" }}
         style={{
           position: "absolute",
