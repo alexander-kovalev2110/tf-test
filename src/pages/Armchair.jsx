@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, IconButton, Button } from "@mui/material";
+import { Box, Button } from "@mui/material";
 
 const chairs = [
   "blue-armchair.png",
@@ -13,7 +13,7 @@ const fabrics = [
   { label: "Embroidery", image: "violet-fabric.png" },
 ];
 
-const ArmchairShowcase = () => {
+const Armchair = () => {
   const [currentChair, setCurrentChair] = useState(chairs[0]);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -65,9 +65,6 @@ const ArmchairShowcase = () => {
           bgcolor="white"
           boxShadow={menuOpen ? 5 : 0}
           transition="top 0.6s ease"
-          // style={{transform: "translateY(100%)",
-          //   animation: "slideUp 1s ease-in-out"
-          // }}
         >
           {fabrics.map((fabric, index) => (
             <Button
@@ -97,4 +94,4 @@ const ArmchairShowcase = () => {
   );
 };
 
-export default ArmchairShowcase;
+export default Armchair;

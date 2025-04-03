@@ -4,8 +4,8 @@ import React, { useState, useRef, useEffect } from "react";
 import Video from "../pages/Video";
 import Introducing from "../pages/Introducing";
 import VirtProd from "../pages/VirtProd";
-import VirtProdSofa from "../pages/VirtProdSofa";
-import Sofa1 from "../pages/Sofa1";
+// import VirtProdSofa from "../pages/VirtProdSofa";
+// import Sofa1 from "../pages/Sofa1";
 import Sofa2 from "../pages/Sofa2";
 import Sofa3 from "../pages/Sofa3";
 import Sofa4 from "../pages/Sofa4";
@@ -16,17 +16,15 @@ import Armchair from "../pages/Armchair";
 import Instalation from "../pages/Instalation";
 import Dimension from "../pages/Dimension";
 import Lifestyle from "../pages/Lifestyle";
-import CloseUp1 from "../pages/CloseUp1";
-import CloseUp2a from "../pages/CloseUp2a";
+// import CloseUp1 from "../pages/CloseUp1";
+// import CloseUp2a from "../pages/CloseUp2a";
 import CloseUp2 from "../pages/CloseUp2";
-import CloseUp3 from "../pages/CloseUp3";
+// import CloseUp3 from "../pages/CloseUp3";
 
 const pages = [
   <Video />,
   <Introducing />,
   <VirtProd />,
-  // <VirtProdSofa />,
-  // <Sofa1 />,
   <Sofa2 />,
   <Sofa3 />,
   <Sofa4 />,
@@ -34,9 +32,7 @@ const pages = [
   <Sofa6 />,
   <Sofa />,
   <Armchair />,
-  // <CloseUp1 />,
   <CloseUp2 />,
-  // <CloseUp3 />,
   <Lifestyle/>,
   <Instalation />,
   <Dimension />,
@@ -47,12 +43,12 @@ export default function PageSlider() {
   const [direction, setDirection] = useState(null); // Direction of slide change
   const isDragging = useRef(false);       // Mouse button pressed state
   const initialY = useRef(0);             // Initial position on the Y axis
-  const threshold = 20;                   // Threshold for switching to the next page
+  const threshold = 20;                   // Threshold for switching to the new page
 
   const contentRef = useRef(null);
 
   const handleMouseDown = (event) => {      // MouseDown event
-    isDragging.current = true;
+    isDragging.current = true;              // Enable mouse tracking
     initialY.current = event.clientY;
   };
 
@@ -61,10 +57,10 @@ export default function PageSlider() {
       const deltaY = event.clientY - initialY.current;
       if (Math.abs(deltaY) > threshold) {
         if (deltaY > 0) {
-          setPage((prev) => (prev < pages.length - 1 ? prev + 1 : 0));
+          setPage((prev) => (prev < pages.length - 1 ? prev + 1 : 0));  // Next page
           setDirection("down");
         } else {
-          setPage((prev) => (prev > 0 ? prev - 1 : pages.length - 1));
+          setPage((prev) => (prev > 0 ? prev - 1 : pages.length - 1));  // Previous page
           setDirection("up");
         }
         isDragging.current = false;
@@ -89,7 +85,7 @@ export default function PageSlider() {
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
     >
-      <div className="slide active slide-up">
+      <div className={(direction === "up") ? "slide active slide-up prev" : "slide active slide-down"}>
         {pages[page]}
       </div>
     </div>

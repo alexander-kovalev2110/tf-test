@@ -32,15 +32,14 @@ const VirtProd = () => {
       {/* Animated appearance of yellow-sofa */}
       <motion.img
         src="virtProdSofa.png"
-        initial={{ y: "100vh", opacity: 1 }}                // Initial position behind the screen
-        animate={{ y: "calc(100vh - 630px)", opacity: 1 }}  // Move to the center of the screen
-        // animate={{ y: "calc(100vh - 600px)", opacity: 1 }}  // Move to the center of the screen
+        initial={{ y: "100vh" }}                // Initial position behind the screen
+        animate={{ y: "calc(100vh - 630px)" }}  // Move to the center of the screen
         transition={{ duration: 1.2, delay: 0.8, ease: "linear" }}
         style={{
           position: "absolute",
-          left: "0", // Центрируем по горизонтали
-          transform: "translateX(-50%)", // Сдвигаем на 50% для точного центрирования
-          width: "100%", // Настроить размер
+          left: "0", 
+          transform: "translateX(-50%)",
+          width: "100%", 
         }}
       />
     </div>

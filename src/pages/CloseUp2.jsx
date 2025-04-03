@@ -5,8 +5,8 @@ import CloseIcon from "@mui/icons-material/Close";
 import "../index.css";
 
 const CloseUp2 = () => {
-  const [isZoomed, setIsZoomed] = useState(false);
-  const [position, setPosition] = useState(0);    // Initial position below the screen
+  const [isZoomed, setIsZoomed] = useState(false);  // Turning zoom mode on and off
+  const [position, setPosition] = useState(0);      // Initial position below the screen
 
   const handleZoomToggle = () => {
     setIsZoomed(true);    // Turn on zoom mode
@@ -22,7 +22,7 @@ const CloseUp2 = () => {
 
   return (
     <div className="image-container">
-      {/* Кнопка Zoom */}
+      {/* Zoom button*/}
       {!isZoomed ? (
         <>
           <img src="closeUp2.png" className="background-image" />
