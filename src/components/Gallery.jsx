@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { IconButton } from "@mui/material";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
+import LoadedImg from "./LoadedImg";
 import "../index.css";
 
 const Gallery = ({images}) => {
@@ -37,12 +38,13 @@ const Gallery = ({images}) => {
               className += " prev";
             }
 
-            return <img key={index} src={src} className={className} />;
+            return (
+              <LoadedImg src={src} className={className} />
+            )
           })}
       </div>
 
       <IconButton       
-        // className="up-down-button"
         onClick={handlePrev}
         style={{
           position: "absolute",

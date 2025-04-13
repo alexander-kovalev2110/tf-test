@@ -191,15 +191,3 @@ body {
   }
 }
 
-.up-down-button {
-  position: absolute;
-  top: 400px;
-  right: 40px;
-  background: transparent;
-  border: 2px solid white;
-  color: white;
-  width: 40px;
-  height: 40px;
-  z-index: 2;
-}
-

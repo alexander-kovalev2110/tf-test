@@ -32,7 +32,7 @@ const pages = [
   <Dimension />,
 ];
 
-export default function PageSlider() {
+const PageSlider = () => {
   const [page, setPage] = useState(0);    // Current page
   const [direction, setDirection] = useState(null); // Direction of slide change
   const isDragging = useRef(false);       // Mouse button pressed state
@@ -85,3 +85,5 @@ export default function PageSlider() {
     </div>
   );
 }
+
+export default PageSlider;
