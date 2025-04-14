@@ -3,13 +3,10 @@ import React from "react";
 import LoadedImg from "../components/LoadedImg";
 import "../index.css";
 
-const Sofa2 = () => {
+const Text1 = () => {
   return (
-    <LoadedImg src="sofa2.png" />
-    // <div>
-    //   <motion.img src="sofa2.png" />
-    // </div>
+    <LoadedImg src="text1.png" className="img-container" />
   );
 }
 
-export default Sofa2;
+export default Text1;

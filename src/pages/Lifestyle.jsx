@@ -1,10 +1,40 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
 import { motion } from "framer-motion";
 import "../index.css";
 
 const Lifestyle = () => {
+  // Preloading the Image
+  const src = "lifestyle.jpg";
+  const [loaded, setLoaded] = useState(false);
+  const [imageSrc, setImageSrc] = useState('');
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = src;
+    img.onload = () => {
+      setImageSrc(src);
+      setLoaded(true);
+    };
+  }, []);
+
   return (
     <div style={{ overflow: "hidden", position: "relative", width: "100vw", height: "100vh" }}>
+      { loaded && (
+        <motion.img 
+          src={imageSrc}
+          initial={{ scale: 2.5}}   // Initial scale (enlarged image)
+          animate={{ scale: 1 }}    // Final scale (normal size)
+          transition={{ duration: 5, ease: "easeInOut", delay: 2 }} // Smooth animation in 5 sec
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0, 
+            width: "100%", 
+            height: "100%",
+            filter: "brightness(80%)", // Darkening the image
+          }}
+        />
+      )}
       <motion.img 
         src="lifestyle.jpg"
         initial={{ scale: 2.5}}   // Initial scale (enlarged image)

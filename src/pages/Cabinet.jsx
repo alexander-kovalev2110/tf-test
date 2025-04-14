@@ -4,13 +4,10 @@ import LoadedImg from "../components/LoadedImg";
 
 import "../index.css";
 
-const Sofa6 = () => {
+const Cabinet = () => {
   return (
-    <LoadedImg src="sofa6.png" />
-    // <div>
-    //   <motion.img src="sofa6.png" />
-    // </div>
+    <LoadedImg src="cabinet.png" className="img-container" />
   );
 }
 
-export default Sofa6;
+export default Cabinet;

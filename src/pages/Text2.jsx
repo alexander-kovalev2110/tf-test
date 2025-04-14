@@ -2,12 +2,12 @@ import React from "react";
 import { motion } from "framer-motion";
 import "../index.css";
 
-const Sofa4 = () => {
+const Text2 = () => {
   return (
     <div>
-      <motion.img src="sofa4.png" />
+      <motion.img src="text2.png" className="img-container" />
     </div>
   );
 }
 
-export default Sofa4;
+export default Text2;

@@ -9,7 +9,7 @@ const VirtProd = () => {
       style={{
         position: "relative",
         overflow: "hidden",
-        minHeight: "100vh",
+        height: "100vh",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -19,7 +19,7 @@ const VirtProd = () => {
     >
       {/* Main image */}
       <motion.span
-        style={{ position: "relative", top: "-100px" }} 
+        style={{ position: "relative", top: "-15vh" }} 
         animate={{ color: ["#4b0082", "#f81c1c", "#4b0082"] }}
         transition={{ duration: 7, repeat: Infinity, repeatType: "reverse" }}
       >
@@ -32,8 +32,8 @@ const VirtProd = () => {
       {/* Animated appearance of yellow-sofa */}
       <motion.img
         src="virtProdSofa.png"
-        initial={{ y: "100vh" }}                // Initial position behind the screen
-        animate={{ y: "calc(100vh - 630px)" }}  // Move to the center of the screen
+        initial={{ y: "100vh" }}            // Initial position behind the screen
+        animate={{ y: "22.1vh" }}           // Move to the center of the screen
         transition={{ duration: 1.2, delay: 0.8, ease: "linear" }}
         style={{
           position: "absolute",

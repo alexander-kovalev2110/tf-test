@@ -3,11 +3,11 @@ import React, { useState, useRef } from "react";
 import Video from "../pages/Video";
 import Introducing from "../pages/Introducing";
 import VirtProd from "../pages/VirtProd";
-import Sofa2 from "../pages/Sofa2";
-import Sofa3 from "../pages/Sofa3";
-import Sofa4 from "../pages/Sofa4";
+import Text1 from "../pages/Text1";
+import Text2 from "../pages/Text2";
+import Text3 from "../pages/Text3";
 import ProductSilos from "../pages/ProductSilos";
-import Sofa6 from "../pages/Sofa6";
+import Cabinet from "../pages/Cabinet";
 import Sofa from "../pages/Sofa";
 import Armchair from "../pages/Armchair";
 import Instalation from "../pages/Instalation";
@@ -19,11 +19,11 @@ const pages = [
   <Video />,
   <Introducing />,
   <VirtProd />,
-  <Sofa2 />,
-  <Sofa3 />,
-  <Sofa4 />,
+  <Text1 />,
+  <Text2 />,
+  <Text3 />,
   <ProductSilos />,
-  <Sofa6 />,
+  <Cabinet />,
   <Sofa />,
   <Armchair />,
   <CloseUp2 />,
