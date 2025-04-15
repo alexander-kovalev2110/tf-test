@@ -27,7 +27,7 @@ const pages = [
   <Sofa />,
   <Armchair />,
   <CloseUp2 />,
-  <Lifestyle/>,
+  <Lifestyle />,
   <Instalation />,
   <Dimension />,
 ];

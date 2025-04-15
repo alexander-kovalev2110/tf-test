@@ -9,15 +9,6 @@ const Gallery = ({images}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [prevIndex, setPrevIndex] = useState(null);
   const [direction, setDirection] = useState(null);     // Direction of slide change
-  const [firstLoaded, setFirstLoaded] = useState(false);
-
-  useEffect(() => {
-    const img = new Image();
-    img.src = images[0];
-    img.onload = () => {
-      setFirstLoaded(true);
-    };
-  }, [images]);
 
   const handleNext = () => {
     setPrevIndex(currentIndex);
@@ -39,8 +30,6 @@ const Gallery = ({images}) => {
     <div className="slider-container">
       <div>
         {images.map((src, index) => {
-            if (index === 0 && !firstLoaded) return null; // Показывать 0-й только когда загружен
-
             let className = "slide";
             if (index === currentIndex) {
               className += " active";
