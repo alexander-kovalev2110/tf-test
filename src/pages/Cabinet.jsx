@@ -1,12 +1,11 @@
 import React from "react";
-// import { motion } from "framer-motion";
-import LoadedImg from "../components/LoadedImg";
+import { motion } from "framer-motion";
 
 import "../index.css";
 
 const Cabinet = () => {
   return (
-    <LoadedImg src="cabinet.png" className="img-container" />
+    <motion.img src="cabinet.png" className="img-container" />
   );
 }
 

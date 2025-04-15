@@ -202,9 +202,8 @@ const ProductSilos = () => {
                       boxShadow: '0 2px 6px rgba(0,0,0,0.1)',
                     }}
                   >
-                    <img
+                    <motion.img
                       src={img}
-                      alt={`Product view ${index + 1}`}
                       style={{
                         height: '100%',
                         width: 'auto',

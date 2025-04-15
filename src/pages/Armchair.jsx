@@ -65,6 +65,7 @@ const Armchair = () => {
           bgcolor="white"
           boxShadow={menuOpen ? 5 : 0}
           transition="top 0.6s ease"
+          borderRadius="10px"
         >
           {fabrics.map((fabric, index) => (
             <Button
