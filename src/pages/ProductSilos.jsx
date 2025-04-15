@@ -94,7 +94,6 @@ const ProductSilos = () => {
       {/* Right side with image */}
       <motion.img
         src="silo.jpg"
-        alt="Product Silo"
         style={{ width: "60%", height: "auto", borderRadius: "20px", transform: "scale(0.8)" }}
       />
 

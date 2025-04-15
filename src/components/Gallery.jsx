@@ -1,14 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { IconButton } from "@mui/material";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
-import LoadedImg from "./LoadedImg";
 import "../index.css";
 
 const Gallery = ({images}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [prevIndex, setPrevIndex] = useState(null);
   const [direction, setDirection] = useState(null); // Direction of slide change
+
+
+  useEffect(() => {
+    images.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, [images]);
 
   const handleNext = () => {
     setPrevIndex(currentIndex);
@@ -39,7 +46,7 @@ const Gallery = ({images}) => {
             }
 
             return (
-              <LoadedImg src={src} className={className} />
+              <img  key={index} src={src} className={className} />
             )
           })}
       </div>
