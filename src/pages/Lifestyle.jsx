@@ -2,17 +2,25 @@ import React from 'react';
 import { motion } from "framer-motion";
 
 const Lifestyle = () => {
+  const [isLoaded, setIsLoaded] = React.useState(false);
+
   return (
     <div style={{ overflow: "hidden", position: "relative", width: "100vw", height: "100vh" }}>
       <motion.img 
         src="lifestyle.jpg"
-        initial={{ scale: 2.5}}   // Initial scale (enlarged image)
-        animate={{ scale: 1 }}    // Final scale (normal size)
-        transition={{ duration: 5, ease: "easeInOut" }} // Smooth animation in 5 sec
+        initial={{ scale: 2.5}}                           // Initial scale (enlarged image)
+        animate={isLoaded ? { scale: 1 } : {}}            // Final scale (normal size)
+        transition={{ duration: 5, ease: "easeInOut" }}   // Smooth animation in 5 sec
+        onLoad={() => setIsLoaded(true)}
         style={{
           position: "relative",
+          top: 0,
+          left: 0,
+          height: "100%",
           width: "100%", 
-          filter: "brightness(80%)", // Darkening the image
+          objectFit: "cover",
+          filter: "brightness(80%)",   // Darkening the image
+          willChange: "transform",     // Animation optimization
         }}
       />
 

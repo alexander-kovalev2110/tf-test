@@ -39,7 +39,7 @@ const Gallery = ({images}) => {
             }
 
             return (
-              <motion.img  key={index} src={src} className={className} />
+              <motion.img key={index} src={src} className={className} />
             )
           })}
       </div>

@@ -34,7 +34,7 @@ const pages = [
 
 const PageSlider = () => {
   const [page, setPage] = useState(0);    // Current page
-  const [direction, setDirection] = useState(null); // Direction of slide change
+  const [direction, setDirection] = useState(null);   // Direction of slide change
   const isDragging = useRef(false);       // Mouse button pressed state
   const initialY = useRef(0);             // Initial position on the Y axis
   const threshold = 20;                   // Threshold for switching to the new page

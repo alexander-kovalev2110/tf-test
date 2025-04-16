@@ -9,7 +9,7 @@ const Introducing = () => {
       textRef.current.style.animation = 'scaleDownText 7s cubic-bezier(0.4, 0, 0.2, 1) forwards';
     }
   }, []);
-
+  
   return (
     <div style={{ width: '100%', height: '100%', position: 'relative' }}>
       {/* Background Video (HTML) */}
@@ -41,7 +41,8 @@ const Introducing = () => {
       <svg
         width="100%"
         height="100%"
-        viewBox="0 0 100% 100%"
+        viewBox="0 0 1500 1200"
+        preserveAspectRatio="xMidYMid slice"
         style={{ position: 'absolute', zIndex: 1 }}
       >
         {/* Background (except text) */}
@@ -56,7 +57,7 @@ const Introducing = () => {
             fontSize="160"
             fontFamily='sans-serif'
             fontWeight="bold"
-            fill="black" // Cuts text from a mask
+            fill="black"      // Cuts text from a mask
             style={{
               transformOrigin: 'center',
               animation: 'scaleDownText 7s  cubic-bezier(0.4, 0, 0.2, 1) forwards'

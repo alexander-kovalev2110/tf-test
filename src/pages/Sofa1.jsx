@@ -4,9 +4,7 @@ import "../index.css";
 
 const Sofa1 = () => {
   return (
-    <div>
-      <motion.img src="sofa1.png" />
-    </div>
+    <motion.img src="sofa1.png" />
   );
 }
 

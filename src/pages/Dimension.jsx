@@ -5,7 +5,7 @@ import "../index.css";
 const images = [
   "dimen1.jpg",
   "dimen2.jpg",
-  "dimen3.jpg",     // The extension was in capital letters (JPG) - vercel didn't read
+  "dimen3.jpg", 
   "dimen4.jpg",
   "dimen5.jpg",
   "dimen6.jpg",

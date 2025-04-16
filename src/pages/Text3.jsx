@@ -4,9 +4,7 @@ import "../index.css";
 
 const Text3 = () => {
   return (
-    <div>
-      <motion.img src="text3.png" className="img-container" />
-    </div>
+    <motion.img src="text3.png" className="img-container" />
   );
 }
 
